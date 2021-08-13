@@ -28,7 +28,7 @@ public class UserController {
 	public String listAll(Model model) {
 		List<User> listUsers = userService.listAllUser();
 		model.addAttribute("listUsers", listUsers);
-		// System.out.println(listUsers.size());
+		System.out.println(listUsers.size());
 		return "allUsers.html";
 	}
 
