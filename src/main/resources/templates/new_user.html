@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Create New User</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Create New User</h1>
+        <br />
+        <form action="#" th:action="@{/users/save}" th:object="${user}" method="post">
+      <p><input class="w3-input w3-padding-16" type="text" th:field="*{firstName}" placeholder="First Name" required name="First Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" th:field="*{lastName}" placeholder="Last Name" required name="Last Name"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">POST USER</button></p>
+    </form>
+    
+    <br/><br/>
+    <form>
+ 		<input type="button" value="Go back!" onclick="history.back()">
+	</form>
+    </div>
+</body>
+</html>
